@@ -18,6 +18,8 @@ int CcnModule::dataCount=0;
 
 			data=0;
 
+
+
 			visited=false;
 
 			text=Text::getPtr();
@@ -47,10 +49,13 @@ int CcnModule::dataCount=0;
             }
 
 			DATA=new std::vector < Ptr<CCN_Name> > ();
+
+			r=0;
 		}
 
 		CcnModule::~CcnModule()
 		{
+
 			p_i_t=0;
 			FIB=0;
 			delete DATA;

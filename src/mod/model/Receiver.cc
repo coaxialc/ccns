@@ -8,6 +8,9 @@
 		Receiver::Receiver(ns3::Ptr<CcnModule> ccnm)
 		{
 			this->ccnm=ccnm;
+			returned=0;
+			askedfor=0;
+			this->ccnm->r=this;
 		}
 
 		Receiver::~Receiver()
@@ -17,12 +20,14 @@
 
 		void Receiver::DataArrived(ns3::Ptr<CCN_Name> data, char* buff, int bufflen)
 		{
+			returned++;
 		//	std::cout<<"Data arrived , "<<data->getValue()<<std::endl;
 		}
 
 
 		void Receiver::SendInterest(ns3::Ptr<CCN_Name> name,int num)
 		{
+
 			unsigned num2=num;
 			for(unsigned i=0;i<num2;i++)
 			{
@@ -31,7 +36,7 @@
 				std::string temporary=name->getValue().substr(1,name->getValue().length()-2)+"/"+keimeno;
 				static std::string* name3=&temporary;
 				Ptr<CCN_Name> name4=Text::getPtr()->giveText(name3);
-
+				askedfor++;
 				this->ccnm->sendInterest(name4, this);
 			}
 		}

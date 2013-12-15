@@ -4,6 +4,7 @@
 	Sender::Sender(ns3::Ptr<CcnModule> ccnm,int waitingTime)
 	{
 		this->ccnm=ccnm;
+		interests=0;
 		this->waitingTime=waitingTime;
 		//dose FIb eggrafes kai onomata
 	}
@@ -22,6 +23,7 @@
 
 		void Sender::InterestReceived(ns3::Ptr<CCN_Name> ccnn)
 		{
+			interests++;
 			//std::cout<<"------------------Interest received: "<<ccnn->getValue()<<std::endl;
 			ns3::Time t=ns3::Seconds(this->waitingTime);
 

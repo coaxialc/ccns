@@ -24,6 +24,8 @@ class Receiver;
 
 		~CcnModule();
 
+		ns3::Ptr<Receiver> r;
+
 		bool visited;
 
 		int node;

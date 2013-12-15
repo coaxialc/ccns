@@ -30,6 +30,8 @@ public:
 	Receiver(ns3::Ptr<CcnModule> ccnm);
 	~Receiver();
 	char* data;
+	int returned;
+	int askedfor;
 	int length;
 	ns3::Ptr<CCN_Name> dataName;
 	void SendInterest(ns3::Ptr<CCN_Name> n,int num);

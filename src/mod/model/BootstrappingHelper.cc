@@ -197,7 +197,7 @@ void BootstrappingHelper::startExperiment()
 
 			//print results and initialize structures again
 			//----------------------------------------------------
-			Ptr<ResultPrinter> rp=CreateObject<ResultPrinter>(module,gs,c);
+			Ptr<ResultPrinter> rp=CreateObject<ResultPrinter>(module,gs,c,sa1);
 
 			//print to file
 			//----------------------------------------------------
