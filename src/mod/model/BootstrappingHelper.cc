@@ -81,13 +81,13 @@ void BootstrappingHelper::startExperiment()
 
 	for(v=boost::vertices(topology);v.first!=v.second;++v.first)
 	{
-		if(boost::degree((*v.first),topology)==1)
+		if(boost::degree((*v.first),topology)==1)//edo allaksa gia na dokimaso oxi mono osous exoun degree 1
 		{
 			v1.push_back((*v.first));
 		}
 	}
 
-	std::cout<<"degree 1 exoun : "<<v1.size()<<std::endl;
+	//std::cout<<"degree 1 exoun : "<<v1.size()<<std::endl;
 
 	if(this->gs>v1.size()-1)
 	{
@@ -102,7 +102,7 @@ void BootstrappingHelper::startExperiment()
 */
 
 	{
-		int numOfReq=50;
+		int numOfReq=200;
 
 		std::cout<<"******************************************************"<<std::endl;
 		std::cout<<"                  Group size: "<<gs<<std::endl;

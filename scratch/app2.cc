@@ -16,7 +16,7 @@ int main(int argc ,char *argv[])
 	  Config::SetDefault ("ns3::RateErrorModel::ErrorUnit", StringValue ("ERROR_UNIT_PACKET"));
 
 	  Config::SetDefault ("ns3::BurstErrorModel::ErrorRate", DoubleValue (0.00));
-	  Config::SetDefault ("ns3::BurstErrorModel::BurstSize", StringValue ("ns3::UniformRandomVariable[Min=1|Max=3]"))*/;
+	  Config::SetDefault ("ns3::BurstErrorModel::BurstSize", StringValue ("ns3::UniformRandomVariable[Min=1|Max=3]"));*/
 
 	CommandLine c;
 	c.Parse (argc, argv);
